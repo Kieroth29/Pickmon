@@ -4,7 +4,7 @@ module.exports = function(app) {
   app.use(
     '/api',
     createProxyMiddleware({
-      target: 'http://localhost:5051',
+      target: 'https://kieroth29.xyz:5051',
       changeOrigin: true,
     })
   );

@@ -14,7 +14,7 @@ load_dotenv()
 def home():
     return {'test': ['test1', 'test2', 'test3']}
 
-@app.route('/pokemon', methods=['GET'])
+@app.route('/api/pokemon', methods=['GET'])
 def pokemon():
     name = request.args.get('name').capitalize()
     db = DB()
@@ -26,7 +26,7 @@ def pokemon():
     else:
         return Response(response=json.dumps({'error': 'Pokémon not found'}), status=404, mimetype='application/json')
 
-@app.route('/random', methods=['GET'])
+@app.route('/api/random', methods=['GET'])
 def random_pokemon():
     db = DB()
     pipeline = [ {'$sample': { 'size': 1 }}]
