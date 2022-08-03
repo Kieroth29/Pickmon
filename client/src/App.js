@@ -5,7 +5,7 @@ function useRandomizer(){
 	const [data, setData] = useState([{}]);
 	
 	useEffect(() => {
-		fetch("/random")
+		fetch("/api/random")
 		.then(res => res.json())
 		.then(data => setData(data))
 	}, []);
