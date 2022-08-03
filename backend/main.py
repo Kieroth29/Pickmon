@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import json
 from os import environ
 from flask import Flask, Response, request
