@@ -19,7 +19,7 @@ function App() {
 	return (
 		<div className="App">
 			<header className="App-header">
-				<img src={process.env.PUBLIC_URL + `/images/pokemon/${data.name}.png`} alt={`${data.name}`}/>
+				<img src={`${data.image_path}`} alt={`${data.name}`}/>
 				<p>{data.name}</p>
 				<p>Pokédex ID: {data.pokedexId}</p>
 				<p>Types</p>
