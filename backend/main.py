@@ -35,4 +35,4 @@ def random_pokemon():
     return {'pokedexId': pokemon['pokedex_id'], 'name': pokemon['name'], 'type': pokemon['type'], 'image_path': f'https://kieroth29.xyz:5051/static/images/pokemon/{str(pokemon["name"]).lower()}.png'}
 
 if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5051, ssl_context=(environ.get('SERVER_CERT'), environ.get('SERVER_KEY')))
+    app.run(host="0.0.0.0", port=5051, ssl_context=(environ.get('API_CERT'), environ.get('API_KEY')))
